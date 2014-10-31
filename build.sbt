@@ -20,7 +20,8 @@ libraryDependencies ++= Seq(
 	"org.scalatest"					%%  "scalatest"				%   "2.1.7",
 	"org.scalacheck"				%%  "scalacheck"			%	"1.11.4",
 	"com.typesafe"                  %   "config"            	%   "1.0.0",
-	"org.apache.spark" 				%	"spark-core_2.10"		%	"1.0.0",
+	"org.apache.spark" 				%	"spark-core_2.10"		%	"1.1.0",
+	"org.apache.spark" 				% 	"spark-graphx_2.10" 	%	"1.1.0",
 	"org.apache.hadoop"				%	"hadoop-client"			%	"2.4.0"
 )
 
