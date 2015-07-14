@@ -1,8 +1,10 @@
 package edu.stanford.networks.ch
-import org.apache.spark.graphx._
+
 import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
+import org.apache.spark.graphx._
 import org.apache.spark.rdd.RDD
+import org.apache.spark.util.BoundedPriorityQueue
 
 object GraphTest {
   def main(args: Array[String]) {
@@ -19,9 +21,11 @@ object GraphTest {
       }
 
     val graph : Graph[Any, String] = Graph.fromEdges(edges, "defaultProperty")
-    //val graph = GraphLoader.edgeListFile(sc, roadNetwork, false, 1)
+    graph.subgraph(epred, vpred)
     println("edges:"+graph.edges.count())
     println("vertices"+graph.vertices.count())
+//    val que = new BoundedPriorityQueue[String](5)
+    
 
   }
 }
